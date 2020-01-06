@@ -1,0 +1,9 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: web-ingress # name of the ingress controller
+spec:
+  backend:
+    serviceName: web-service # name as defined in the service definition
+    servicePort: 8081 # port as defined in the service definition
