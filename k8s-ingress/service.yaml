@@ -8,7 +8,7 @@ spec:
   ports:
   - port: 8081 # decided to use port 8081 just to not use 8080
     protocol: TCP
-    targetPort: 8080 # port as used by https://github.com/jmalloc/echo-server/blob/master/cmd/echo-server/main.go#L20 and https://github.com/jmalloc/echo-server/blob/master/Dockerfile#L4 ffs 
+    targetPort: 8080 # port as used by https://github.com/jmalloc/echo-server/blob/master/cmd/echo-server/main.go#L20 and https://github.com/jmalloc/echo-server/blob/master/Dockerfile#L4 ffs
   selector:
-    app: webapp # "app: webapp" is the selector as defined in the pods deployment 
+    app: webapp # "app: webapp" is the selector as defined in the pods deployment
   type: NodePort # GKE thing, you can only use NodePort for HTTP Ingress

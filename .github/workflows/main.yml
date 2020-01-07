@@ -1,0 +1,14 @@
+name: Validate k8s manifests
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: dipshit/kubeval@1.0
+      with:
+        params: 'k8s-ingress/*.yaml'
